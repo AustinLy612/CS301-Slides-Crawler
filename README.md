@@ -1,10 +1,10 @@
 # CS301 Slides Crawler
 
-Automatically discovers and downloads PDF files from given web pages, then merges them into a single PDF. Supports Cookie-based auth, Bearer tokens, and generic form login — ideal for course pages that require authentication.
+Automatically discovers and downloads PDF files from given web pages, then merges them into a single PDF. Supports Cookie-based login — ideal for CS301 course pages that require authentication.
 
 ## Features
 - Auth support:
-  - Provide browser `Cookie` directly (strongly recommended).
+  - Use browser `Cookie` to maintain login status directly.
   - Generic form login with customizable field names and hidden input extraction.
 - Robust PDF discovery:
   - Finds `.pdf` links in `a`, `iframe`, `embed`, and `object` tags; normalizes relative links to absolute.
@@ -27,7 +27,7 @@ pip install requests beautifulsoup4 tqdm pypdf
 ```
 
 ## Quick Start
-- Cookie-based login (most common):
+- Cookie-based login(ask AI if you don't know how to get the cookie):
 
 ```bash
 python .\download_and_merge_pdfs.py --cookie-header "<paste your full Cookie value here>"
